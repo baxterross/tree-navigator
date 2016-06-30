@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Tree Navigator</title>
+		<style type="text/css">
+			ul.node-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				width: 240px;
+				background: #999;
+			}
+			li.node {
+				margin: 0;
+				padding: 8px 16px;
+				position: relative;
+				border-top: 2px groove;
+				cursor: pointer;
+			}
+			li.node.disabled {
+				cursor: default;
+			}
+
+			li.node:nth-child(2n) {
+				background: #aaa;
+			}
+
+			li.node:first-child {
+				background: #888;
+				border-top: 0;
+			}
+			li.node:first-child:before {
+				display: block;
+				content: '<-';
+				float: left;
+				width: 20px;
+			}
+			li.node:first-child.disabled:before {
+				display: none;
+			}
+
+			li.node:after {
+				display: block;
+				content: '->';
+				float: right
+			}
+			li.node:first-child:after {
+				display: none;
+			}
+			li.node.disabled:after {
+				content: '☐';
+			}
+
+		</style>
+	</head>
+	<body>
+		<input type="text" class="tree-navigator" />
+	</body>
+	<script type="text/javascript" src="/main.js"></script>
+</html>
